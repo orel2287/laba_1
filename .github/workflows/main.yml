@@ -1,6 +1,4 @@
-name: Python App CI
-
-
+name: laba1
 
 on:
 
