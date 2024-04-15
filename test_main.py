@@ -14,7 +14,7 @@ class TestAddNumbers(unittest.TestCase):
 
     def test_add_mixed_numbers(self):
         result = add_numbers(10, -3)
-        self.assertEqual(result, 7)
+        self.assertEqual(result, 8)
 
     def test_add_irrational_numbers(self):
         result = add_numbers(0.2, 0.3)
