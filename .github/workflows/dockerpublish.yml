@@ -22,7 +22,7 @@ jobs:
       id: metadata
       uses: docker/metadata-action@v4
       with:
-        images: alex/practik2
+        images: orel2287/practik2
         tags: |
           type=ref,event=branch
           type=ref,event=tag
@@ -37,6 +37,6 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: alex/practick2:${{ steps.shortsha.outputs.sha }}
+        tags: orel2287/practick2:${{ steps.shortsha.outputs.sha }}
         labels: ${{ steps.metadata.outputs.labels }}
         
