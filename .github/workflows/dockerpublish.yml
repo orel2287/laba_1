@@ -20,8 +20,8 @@ jobs:
 
     - name: Extract metadata for Docker
       id: metadata
-      user: docker/metadata-action@v4
-      witch:
+      uses: docker/metadata-action@v4
+      with:
         images: alex/practik2
         tags: |
           type=ref,event=branch
