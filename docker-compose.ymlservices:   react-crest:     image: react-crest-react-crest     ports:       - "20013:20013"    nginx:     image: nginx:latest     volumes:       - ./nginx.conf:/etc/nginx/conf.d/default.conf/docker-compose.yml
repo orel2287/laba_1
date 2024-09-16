@@ -1,0 +1,20 @@
+services:
+  laba1_app:
+    image: orel2287/laba_1
+    container_name: weather-container
+    command: python main.py
+
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf/
+    ports:
+      - "80:80"
+    depends_on:
+      - laba1_app
+  watchtowe:
+    image: containrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 weather-container nginx-container
+
