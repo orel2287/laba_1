@@ -12,7 +12,7 @@ services:
       - "80:80"
     depends_on:
       - laba1_app
-  watchtowe:
+  watchtower:
     image: containrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
