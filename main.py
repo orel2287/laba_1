@@ -23,8 +23,6 @@ def get_weather():
         weather_info = {
             "city": data['name'],
             "temperature": data['main']['temp'],
-            "description": data['weather'][0]['description'],
-            "humidity": data['main']['humidity']
         }
         return jsonify(weather_info)
     else:
