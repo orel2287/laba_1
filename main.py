@@ -8,9 +8,7 @@ BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
 
 @app.route('/weather', methods=['GET'])
 def get_weather():
-    city = request.args.get('city')  # Получаем название города из параметров запроса
-    if not city:
-        return jsonify({"error": "Please provide a city name."}), 400
+    city = 'Vladimir'
 
     response = requests.get(BASE_URL, params={
         'q': city,
@@ -31,4 +29,4 @@ def get_weather():
         return jsonify({"error": "City not found."}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
