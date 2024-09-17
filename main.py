@@ -1,9 +1,9 @@
-
-from flask import Flask
+from flask import Flask, request, jsonify
 import requests
+
 app = Flask(__name__)
 
-API_KEY = '47d89e1c6e7a4d908f47327c49d7bfeb'  # Замените на ваш API ключ OpenWeatherMap
+API_KEY = '47d89e1c6e7a4d908f47327c49d7bfeb'  # Замените на Ваш API ключ OpenWeatherMap
 BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
 
 @app.route('/weather', methods=['GET'])
