@@ -1,7 +1,7 @@
 services:
   laba1_app:
     image: orel2287/laba_1
-    container_name: weather-container
+    container_name: weatherApp-container
     command: python main.py
 
   nginx:
@@ -13,7 +13,7 @@ services:
     depends_on:
       - laba1_app
   watchtower:
-    image: containrr/watchtower
+    image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30 weather-container nginx-container
+    command: --interval 30 weatherApp-container nginx-container
